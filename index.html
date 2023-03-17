@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <title>Sergio Aldana - Fotografo</title>
+    <style>
+      .grid-gallery {
+        display: grid;
+        grid-auto-rows: 200px;
+        gap: 1rem;
+        grid-auto-flow: row dense;
+      }
+
+      @media all and (min-width: 320px) {
+        .grid-gallery {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media all and (min-width: 768px) {
+        .grid-gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media all and (min-width: 1024px) {
+        .grid-gallery {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
+      .grid-gallery__item:nth-child(11n+1) {
+        grid-column: span 1;
+      }
+
+      .grid-gallery__item:nth-child(11n+4) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .grid-gallery__item:nth-child(11n+6) {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .grid-gallery__item:nth-child(11n+7) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .grid-gallery__item:nth-child(11n+8) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .grid-gallery__item:nth-child(11n+9) {
+        grid-row: span 3;
+      }
+
+      .grid-gallery__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+  </style>
+</head>
+<body>
+    <!-- Header. -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <h1><span>S</span>ergio <span>A</span>ldana</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="#hero" data-after="Inicio">Inicio</a></li>
+                        <li><a href="#about" data-after="Presentación">Presentación</a></li>
+                        <li><a href="#services" data-after="Portafolio">Galería</a></li>
+                        <li><a href="#contact" data-after="Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header. -->
+    <!-- Cover Section. -->
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Bievenidos,<span></span></h1>
+                <h1>Sergio Aldana<span></span></h1>
+                <h1>Fotografo<span></span></h1>
+                <a href="#portfolio" type="button" class="cta">Galería</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Cover Section  -->
+    <!-- About Section -->
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="./images/saf_about.jpeg" alt="img">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">Acerca <span>de</span></h1>
+                <h2>Permíteme presentarme</h2>
+                <br>
+                <p>
+                   Trabajo administrando ranchos ganaderos, me gusta mucho mi trabajo y constantemente viajo por el estado
+                   de Chihuahua, pero también soy un gran apasionado de la fotografía, sobre todo de los paísajes y escenarios
+                   naturales de mi tierra, desde los densos bosques templados, hasta el desierto, pasando por el altiplano
+                   Chihuahuense, también me gusta fotografiar personas, de rostros con expresiones interesantes.
+                </p>
+                <p>Te invito a conocer mi mundo, a tráves de la lente de mi cámara.</p>
+                <a href="#" class="cta">¡Contáctame!</a>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section. -->
+    <!-- Gallery Section. -->
+    <section id="services">
+        <div class="services container">
+            <div class="service-top">
+                <h1 class="section-title">Galer<span>í</span>a</h1>
+            </div>
+            <div class="grid-gallery">
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_17.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_01.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_05.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_03.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_04.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_07.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_08.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_06.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_02.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_10.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_09.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_11.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_12.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_13.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_15.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_14.jpeg">
+                </a>
+                <a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_00.jpeg">
+                </a>
+                <!--<a class="grid-gallery__item" href="#">
+                    <img class="grid-gallery__image" src="./images/gallery/gallery_16.jpeg">
+                </a>-->
+            </div>
+        </div>
+    </section>
+  <!-- End Service Section -->
+
+  <!-- Projects Section -->
+  <!--<section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 1</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 2</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 3</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 5</h1>
+            <h2>Coding is Love</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+          </div>
+          <div class="project-img">
+            <img src="./img/img-1.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <!-- End Projects Section -->
+
+  
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Cont<span>a</span>cto</h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+1 234 123 1234</h2>
+            <h2>+1 234 123 1234</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>info@gmail.com</h2>
+            <h2>abcd@gmail.com</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>S</span>ergio <span>A</span>ldana</h1>
+      </div>
+      <h2>Fotografo</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://icons8.com/icon/118497/facebook" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2023 Sergio Aldana. Derechos reservados</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./js/hamburger.js"></script>
+</body>
+
+</html>
