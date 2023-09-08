@@ -2,320 +2,236 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/gallery.css">
-    <title>Sergio Aldana - Fotografo</title>
-    <style>
-      .grid-gallery {
-        display: grid;
-        grid-auto-rows: 200px;
-        gap: 1rem;
-        grid-auto-flow: row dense;
-      }
-
-      @media all and (min-width: 320px) {
-        .grid-gallery {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-
-      @media all and (min-width: 768px) {
-        .grid-gallery {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      @media all and (min-width: 1024px) {
-        .grid-gallery {
-          grid-template-columns: repeat(6, 1fr);
-        }
-      }
-
-      .grid-gallery__item:nth-child(11n+1) {
-        grid-column: span 1;
-      }
-
-      .grid-gallery__item:nth-child(11n+4) {
-        grid-column: span 2;
-        grid-row: span 1;
-      }
-
-      .grid-gallery__item:nth-child(11n+6) {
-        grid-column: span 3;
-        grid-row: span 1;
-      }
-
-      .grid-gallery__item:nth-child(11n+7) {
-        grid-column: span 1;
-        grid-row: span 2;
-      }
-
-      .grid-gallery__item:nth-child(11n+8) {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-
-      .grid-gallery__item:nth-child(11n+9) {
-        grid-row: span 3;
-      }
-
-      .grid-gallery__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 6px;
-      }
-  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sergio Aldana | Photography</title>
 </head>
 <body>
-    <!-- Header. -->
-    <section id="header">
-        <div class="header container">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="#hero">
-                        <h1><span>S</span>ergio <span>A</span>ldana</h1>
+    <!-- Navbar section -->
+    <nav class="navbar">
+        <a href="#" class="logo">LOGO</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Trabajo</a></li>
+                <li><a href="#">Fotografías</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <img src="images/hamburger-btn.png" alt="Hamburger menú" class="menu-hamburger">
+    </nav>
+    <!-- End of Navbar section -->
+    <!-- Header section //-->
+    <header id="header" class="vh-100 flex">
+        <div class="header-content">
+            <div class="container">
+                <h1>Bienvenidos <br><span class="typewrite" data-loop="yes" data-speed="100" data-delay="2000" data-words='["Permíteme presentarme", "Sergio Aldana", "Fotógrafo"]'></span></h1>
+                <h3>Conoce mi mundo, a través de la lente de mi cámara</h3>
+                <p><span style="color: yellow">SITIO WEB BETA</span></p>
+                <ul class="social-links">
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fab fa-facebook-f"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fab fa-instagram"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fab fa-flickr"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header //-->
+    <!-- Main //-->
+    <main>
+        <section id="about" class="about py-7">
+            <div class="container">
+                <div class="about-content grid">
+                    <div class="about-left">
+                        <img src="images/about.jpg" alt="Sergio Aldana.">
+                    </div>
+                    <div class="about-right">
+                        <div class="title">
+                            <h2>Acerca de mí</h2>
+                        </div>
+                        <p class="lead">
+                            Soy administrandor de ranchos ganaderos, y un apasionado de la fotografía, me gusta mucho mi trabajo y constantemente viajo
+                            por el estado de Chihuahua, me gusta fotografiar los paísajes y escenarios naturales de mi tierra, desde los densos bosques
+                            templados, hasta el desierto, pasando por el altiplano Chihuahuense, también me gusta fotografiar la vida salvaje, y 
+                            personas de rostros con expresiones interesantes.
+                        </p>
+                        <p class="lead">
+                            Te invito a que deslices hacia abajo, para que conozcas un poco más sobre mi forma de trabajar, y algunas de mis fotografías.
+                        </p>
+                        <a href="#work" class="btn-down">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End of Main //-->
+    <!-- Work //-->
+    <section id = "work" class = "vh-100 flex py-7">
+        <div class = "container">
+            <div class = "work-content">
+                <div class = "title">
+                    <h2>Forma de trabajar</h2>
+                </div>
+                <ul class = "work-top grid">
+                    <li class = "lead"><i class = "fas fa-dot-circle"></i>
+                        Utilizo un equipo Nikon APS-C y full frame, poseo varios lentes pero ninguno como favorito, todos tienen su encanto.
+                    </li>
+                    <li class = "lead"><i class = "fas fa-dot-circle"></i>
+                        Me encanta la fotografía en blanco y negro, expresa mucho, pero hay imagenes que deben ser en color para que la persona 
+                        que visializa la fotografía, sienta lo que he querido expresar.
+                    </li>
+                    <li class = "lead"><i class = "fas fa-dot-circle"></i> 
+                        Cuando veo lo que quiero fotografiar, la retrato primero en mi mente, la imagino como va a ser y ahí la tomo, luego en la edición 
+                        hago lo que visualicé desde un inicio, puede ser en blanco y negro o puede ser en color.
+                    </li>
+                    <li class = "lead"><i class = "fas fa-dot-circle"></i> No se sabe cuándo se presentará la oportunidad, para capturar un momento único, es por ello que siempre tengo mi equipo fotográfico a la mano.</li>
+                </ul>
+                <div class = "work-bottom grid">
+                    <div>
+                        <span class = "icon"><img src = "images/wildlife-icon.png"></span>
+                        <h3>Vida salvaje</h3>
+                    </div>
+                    <div>
+                        <span class = "icon"><img src = "images/portrait-icon.png"></span>
+                        <h3>Rostros</h3>
+                    </div>
+                    <div>
+                        <span class = "icon"><img src = "images/landscape-icon.png"></span>
+                        <h3>Paisajes</h3>
+                    </div>
+                    <div>
+                        <span class = "icon"><img src = "images/family-icon.png"></span>
+                        <h3>Familias</h3>
+                    </div>
+                </div>
+                <a href = "#portfolio" class = "btn-down btn-down-white">
+                    <i class = "fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End of Work //-->
+    <!-- Portfolio //-->
+    <section id = "portfolio" class = "vh-100 py-7">
+        <div class = "container">
+            <div class = "portfolio-content">
+                <div class = "title">
+                    <h2>Algunas de mis fotografías</h2>
+                    <a href = "#contact" class = "btn-down">
+                        <i class = "fas fa-chevron-down"></i>
                     </a>
                 </div>
-                <div class="nav-list">
-                    <div class="hamburger">
-                        <div class="bar"></div>
+                <div class = "portfolio-grid grid">
+                    <div><img src = "images/photo-work/work-pic-1.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-2.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-3.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-4.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-5.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-6.jpg"></div>
+                    <div><img src = "images/photo-work/work-pic-7.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Portfolio //-->
+    <!-- Contact section //-->
+    <section id = "contact" class = "py-7">
+        <div class = "container">
+            <div class = "contact-content flex">
+                <div class = "contact-left">
+                    <div class="title">
+                        <h2>Contáctame</h2>
                     </div>
-                    <ul>
-                        <li><a href="#hero" data-after="Inicio">Inicio</a></li>
-                        <li><a href="#about" data-after="Presentación">Presentación</a></li>
-                        <li><a href="#services" data-after="Portafolio">Galería</a></li>
-                        <li><a href="#contact" data-after="Contacto">Contacto</a></li>
-                    </ul>
+                    <p class = "lead"><i class = "fas fa-phone-alt"></i> (614) 1234567</p>
+                    <p class = "lead"><i class = "fas fa-envelope"></i> contacto@sergioaldanaphotography.com</p>
+                    <form action="">
+                        <input type = "text" class="form-control" placeholder="Nombre">
+                        <input type = "email" class="form-control" placeholder="Correo electrónico">
+                        <textarea name="" id="" cols="60" rows="10" class="form-control" placeholder="Mensaje"></textarea>
+                        <input type="submit" class="btn-submit btn" value="Enviar">
+                    </form>
+                </div>
+
+                <div class = "contact-right">
+                    <img src = "images/contact.jpg" alt = "contact image">
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Header. -->
-    <!-- Cover Section. -->
-    <section id="hero">
-        <div class="hero container">
+    <!-- End of Contact section //-->
+
+    <!-- Instagram section //-->
+    <section id = "insta" class = "py-7">
+        <div class = "container">
+            <div class = "insta-content">
+                <div class = "title">
+                    <h2>Sígueme en Instagram</h2>
+                    <a href = "#footer" class = "btn-down btn-down-white">
+                        <i class = "fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div class = "insta-grid grid">
+                    <div><img src = "images/social/instagram/insta-pic-1.jpg"></div>
+                    <div><img src = "images/social/instagram/insta-pic-2.jpg"></div>
+                    <div><img src = "images/social/instagram/insta-pic-3.jpg"></div>
+                    <div><img src = "images/social/instagram/insta-pic-4.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of instagram section -->
+</main>
+<!-- end of main content -->
+
+<!-- footer -->
+<footer id = "footer" class = "py-7">
+    <div class = "container">
+        <div class = "footer-content">
             <div>
-                <h1>Bievenidos,<span></span></h1>
-                <h1>Sergio Aldana<span></span></h1>
-                <h1>Fotografo<span></span></h1>
-                <a href="#portfolio" type="button" class="cta">Galería</a>
+                <h3>Sergio Aldana</h3>
+                <h3>Fotógrafo</h3>
+                <div><img src = "images/sergio-aldana.jpg"></div>
+            </div>
+            <div>
+                <h3>Ligas</h3>
+                <ul class = "flex">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Trabajo</a></li>
+                    <li><a href="#">Fotografías</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!-- End Cover Section  -->
-    <!-- About Section -->
-    <section id="about">
-        <div class="about container">
-            <div class="col-left">
-                <div class="about-img">
-                    <img src="./images/about_saf.jpeg" alt="img">
-                </div>
-            </div>
-            <div class="col-right">
-                <h1 class="section-title">Acerca <span>de</span></h1>
-                <h2>Permíteme presentarme</h2>
-                <br>
-                <p>
-                   Trabajo administrando ranchos ganaderos, me gusta mucho mi trabajo y constantemente viajo por el estado
-                   de Chihuahua, pero también soy un gran apasionado de la fotografía, sobre todo de los paísajes y escenarios
-                   naturales de mi tierra, desde los densos bosques templados, hasta el desierto, pasando por el altiplano
-                   Chihuahuense, también me gusta fotografiar personas, de rostros con expresiones interesantes.
-                </p>
-                <p>Te invito a conocer mi mundo, a tráves de la lente de mi cámara.</p>
-                <a href="#" class="cta">¡Contáctame!</a>
-            </div>
-        </div>
-    </section>
-    <!-- End About Section. -->
-    <!-- Gallery Section. -->
-    <section id="services">
-        <div class="services container">
-            <div class="service-top">
-                <h1 class="section-title">Galer<span>í</span>a</h1>
-            </div>
-            <div class="grid-gallery">
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_17.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_01.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_05.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_03.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_04.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_07.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_08.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_06.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_02.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_10.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_09.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_11.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_12.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_13.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_15.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_14.jpeg">
-                </a>
-                <a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_00.jpeg">
-                </a>
-                <!--<a class="grid-gallery__item" href="#">
-                    <img class="grid-gallery__image" src="./images/gallery/gallery_16.jpeg">
-                </a>-->
-            </div>
-        </div>
-    </section>
-  <!-- End Service Section -->
-
-  <!-- Projects Section -->
-  <!--<section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 5</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/img-1.png" alt="img">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>-->
-  <!-- End Projects Section -->
+</footer>
+<!-- end of footer -->
+    <!-- End of work section. -->
+    <script src="scripts/typewriting-master/typewriting.js"></script>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Cont<span>a</span>cto</h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+1 234 123 1234</h2>
-            <h2>+1 234 123 1234</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>info@gmail.com</h2>
-            <h2>abcd@gmail.com</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>S</span>ergio <span>A</span>ldana</h1>
-      </div>
-      <h2>Fotografo</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="#"><img src="https://icons8.com/icon/118497/facebook" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
-        </div>
-      </div>
-      <p>Copyright © 2023 Sergio Aldana. Derechos reservados</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./js/hamburger.js"></script>
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        });
+    </script>
 </body>
-
 </html>
