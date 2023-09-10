@@ -232,9 +232,13 @@ h1, h2, h3 {
 
 /* About */
 .about-left {
+    border-left: 8px solid red;
+    border-bottom: 8px solid red;
+    padding-bottom: 10px;
+    padding-left: 10px;
 	margin-bottom: 4rem;
-	height: 480px;
-	overflow: hidden;
+    /*height: 480px;*/
+	/*overflow: hidden;*/
 }
 
 /* button down and title -reusable */
