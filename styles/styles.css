@@ -70,6 +70,14 @@ h1, h2, h3 {
 	padding: 7rem 0;
 }
 
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -232,13 +240,14 @@ h1, h2, h3 {
 
 /* About */
 .about-left {
-    /*border-left: 8px solid red;
+    /* border-left: 8px solid red;
     border-bottom: 8px solid red;
     padding-bottom: 10px;
     padding-left: 10px;
-	margin-bottom: 4rem;*/
-    height: 480px;*/
-	overflow: hidden;*/
+	margin-bottom: 4rem;
+    height: 480px;
+	overflow: hidden; */
+    box-shadow: 15px 15px 1.5rem rgba(0, 0, 0, 0.5);
 }
 
 /* button down and title -reusable */
@@ -342,6 +351,7 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 .contact-left .btn-submit{
+    border-radius: 5px;
     padding: 1.4rem 3rem;
     font-family: 'Poppins', sans-serif;
     background-color: var(--dark-color);
@@ -357,7 +367,7 @@ h1, h2, h3 {
 }
 
 #insta{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/old-camera.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(../images/meridiano.jpg) center/cover no-repeat fixed;
     min-height: 65vh;
 }
 #insta .title h2{
@@ -380,36 +390,57 @@ h1, h2, h3 {
 }
 
 /* footer */
-#footer{
-    background-color: var(--dark-color);
+#footer {
+    background-color: /*var(--dark-color);*/ #111;
     color: var(--light-color);
 }
-.footer-content{
+
+.footer-copy {
+    background-color: #000;    
+    /* color: #44bae8; */
+}
+
+.footer-copy p {
+    padding-left: 20px;
+    color: #44bae8;
+}
+
+.footer-content {
     text-align: center;
 }
-.footer-content h3{
+
+.footer-content h3 {
     color: var(--light-color);
-    font-size: 2.5rem;
     letter-spacing: 1px;
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
 }
-.footer-content ul{
+
+.footer-content ul {
     flex-direction: column;
 }
-.footer-content ul li a{
+
+.footer-content ul li a {
     color: var(--light-color);
     font-size: 1.5rem;
     transition: var(--transition);
 }
-.footer-content ul li a:hover{
+
+.footer-content ul li a:hover {
     opacity: 0.7;
 }
-.footer-content ul li{
+
+.footer-content ul li {
     margin: .5rem 1rem;
 }
-.footer-content > div:first-child{
+
+.footer-content > div:first-child {
     margin-bottom: 3rem;
 }
-.footer-content > div:first-child div{
+
+.footer-content > div:first-child div {
     width: 100px;
     height: 100px;
     overflow: hidden;
@@ -417,67 +448,115 @@ h1, h2, h3 {
     border-radius: 50%;
 }
 
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-space {
+    padding-right: 40px;
+}
+
+
+.footer-menu{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /*float: right;*/
+  
+  }
+  .footer-menu ul{
+    display: flex;
+  }
+  .footer-menu ul li{
+  padding-right: 10px;
+  display: block;
+  }
+  .footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+  .footer-menu ul li a:hover{
+    color: #27bcda;
+  }
+
 /* Media Queries */
 @media(min-width: 768px) {
 	.header-content h1 {
 		font-size: 7rem;
 	}
 }
-@media(min-width: 450px){
+
+@media(min-width: 450px) {
     .work-bottom{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
         row-gap: 0;
     }
 }
+
 @media(min-width: 576px){
     .title h2{
         font-size: 4rem;
     }
+
     .work-bottom{
         grid-template-columns: repeat(4, 1fr);
     }
+
     .portfolio-grid{
         grid-template-columns: repeat(2, 1fr);
     }
+
     .portfolio-grid > div{
         height: 300px;
         overflow: hidden;
     }
+
     .portfolio-grid > div img{
         height: 100%;
         object-fit: cover;
     }
+
     .contact-left form .form-control{
         max-width: 500px;
     }
+
     .footer-content ul{
         flex-direction: row;
     }
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
     .header-content h1{
         font-size: 7rem;
     }
+
     .about-content, .work-top{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 6rem;
         row-gap: 0;
     }
+
     .about-left{
         margin-bottom: 0;
     }
+
     .contact-content{
         flex-direction: row;
     }
+
     .contact-right{
-        padding-left: 3rem;
+        box-shadow: 15px 15px 1.5rem rgba(0, 0, 0, 0.5);
+        /* padding-left: 3rem; */
         width: 50%;
     }
+
     .contact-left{
         width: 50%;
     }
+
     .insta-grid{
         grid-template-columns: repeat(2, 1fr);
     }
