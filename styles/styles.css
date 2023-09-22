@@ -181,7 +181,7 @@ h1, h2, h3 {
 
 .social-links {
     display: flex;
-    margin-top: 3.5rem;
+    margin-top: 3.5rem; 
 }
 
 .social-links li a {
