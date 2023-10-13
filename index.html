@@ -28,6 +28,9 @@
     <header id="header" class="vh-100 flex">
         <div class="header-content">
             <div class="container">
+                <div class="arrow l" onclick="prevSlide()">
+                    <img src="./images/left-arrow.png" alt="Left">
+                </div>
                 <h1>Bienvenidos <br><span class="typewrite" data-loop="yes" data-speed="100" data-delay="2000" data-words='["Permíteme presentarme", "Sergio Aldana", "Fotógrafo"]'></span></h1>
                 <h3>Conoce mi mundo, a través de la lente de mi cámara</h3>
                 <p><span style="background-color: yellow; border-radius: 3px; color: black; padding-left: 5px; padding-right: 5px;">Página web beta</span></p>
@@ -48,6 +51,9 @@
                         </a>
                     </li>
                 </ul>
+                <div class="arrow r" onclick="nextSlide()">
+                    <img src="./images/right-arrow.png" alt="Right">
+                </div>
             </div>
         </div>
     </header>
@@ -105,23 +111,23 @@
                     </ul>
                     <div class="work-bottom grid">
                         <div>
-                            <!-- <span class="icon"><img src="images/wildlife-icon.png"></span> //-->
-                            <span class="blue-icon-text"><i class="fa-solid fa-paw fa-4x"></i></span>
+                            <span class="icon"><img src="images/icons/wildlife-icon-blue.png"></span>
+                            <!-- <span class="blue-icon-text"><i class="fa-solid fa-paw fa-4x"></i></span> //-->
                             <h3 class="margin-icon-text">Vida salvaje</h3> 
                         </div>
                         <div>
-                            <!-- <span class="icon"><img src="images/portrait-icon.png"></span> //-->
-                            <span class="blue-icon-text"><i class="fa-solid fa-image-portrait fa-4x"></i></span>
+                            <span class="icon"><img src="images/icons/portrait-icon-blue.png"></span>
+                            <!-- <span class="blue-icon-text"><i class="fa-solid fa-image-portrait fa-4x"></i></span> //-->
                             <h3 class="margin-icon-text">Rostros</h3>
                         </div>
                         <div>
-                            <!-- <span class="icon"><img src="images/landscape-icon.png"></span> //-->
-                            <span class="blue-icon-text"><i class="fa-solid fa-mountain-sun fa-4x"></i></span>                            
+                            <span class="icon"><img src="images/icons/landscape-icon-blue.png"></span>
+                            <!-- <span class="blue-icon-text"><i class="fa-solid fa-mountain-sun fa-4x"></i></span> //-->                            
                             <h3 class="margin-icon-text">Paisajes</h3>
                         </div>
                         <div>
-                            <!-- <span class="icon"><img src="images/family-icon.png"></span> //-->
-                            <span class="blue-icon-text"><i class="fa-solid fa-people-roof fa-4x"></i></span>
+                            <span class="icon"><img src="images/icons/family-icon-blue.png"></span>
+                            <!-- <span class="blue-icon-text"><i class="fa-solid fa-people-roof fa-4x"></i></span> //-->
                             <h3 class="margin-icon-text">Familias</h3>
                         </div>
                     </div>
@@ -261,11 +267,42 @@
     <!-- End of Footer section //-->
     <script src="scripts/typewriting-master/typewriting.js"></script>
     <script>
-        const menuHamburger=document.querySelector(".menu-hamburger");
-        const navLinks=document.querySelector(".nav-links");
+        const menuHamburger=document.querySelector(".menu-hamburger")
+        const navLinks=document.querySelector(".nav-links")
+        
         menuHamburger.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-menu')
-        });
+        })
+
+        // Background slider.
+        const covers = [
+            "url('./images/slider/cover-01.jpg') ",
+            "url('./images/slider/cover-02.jpg') ",
+            "url('./images/slider/cover-03.jpg') ",
+            "url('./images/slider/cover-04.jpg') "
+        ]
+
+        const backProperties = 'center/ cover no-repeat fixed'
+        const coverContainer = document.getElementById("header")
+
+        let currentSlide = 0
+        let maxSliders = covers.length - 1
+
+        function displaySlide() {
+            coverContainer.style.background = covers[currentSlide] + backProperties
+        }
+
+        function nextSlide() {
+            if (currentSlide === maxSliders) {
+                currentSlide = 0
+            } else {
+                currentSlide++
+            }
+
+            displaySlide()
+        }
+
+        displaySlide()
     </script>
 </body>
 </html>
